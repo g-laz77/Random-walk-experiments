@@ -5,13 +5,13 @@ N = list(range(0, 100))
 probs = []
 # Create random data with numpy
 import numpy as np
-for lo in range(100):
+number = input("Enter max number of steps per drunk:")
+tc = input("Enter number of testcases: ")
+for n in range(number):
     origin = 0
-    for i in range(5000):
+    for i in range(tc):
         one_x = 0
         two_x = 0
-        
-
         for j in range(0,lo):
             temp = random.uniform(0,1)
             if temp > 0.5:
@@ -31,7 +31,7 @@ for lo in range(100):
 
     probability = float(origin)/5000
     print(probability)
-    probs.append(probability)
+    probs.append(N,probability)
 
 py.plot(N,probs)
 # N = 500
